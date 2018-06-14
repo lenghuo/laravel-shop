@@ -21,7 +21,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified' => 'boolean',
     ];
-    
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -30,4 +30,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function addresses()
+    {
+        return $this->hasMany(UserAddress::class);
+    }
 }
