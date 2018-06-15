@@ -49,8 +49,9 @@
                               }
                               // 调用删除接口，用 id 来拼接出请求的url
                               axios.delete('/user_addresses/' + id)
-                                    .then(function() {
+                                    .then(function(response) {
                                         // 请求成功之后重新加载页面
+                                        console.log(response);
                                         location.reload();
                                     })
                           })
