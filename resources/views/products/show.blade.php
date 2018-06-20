@@ -73,7 +73,10 @@ $(document).ready(function () {
   $('.btn-favor').click(function () {
     axios.post('{{ route('products.favor', ['product' => $product->id]) }}')
           .then(function () {
-            swal('操作成功', '', 'success');
+            swal('操作成功', '', 'success')
+              .then(function () {
+                location.reload();
+              });
           }, function(error) {
             if (error.response && error.response.status === 401) {
               swal('请先登录', '', 'error');
