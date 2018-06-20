@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('title', '商品列表')
+
 @section('content')
 <div class="row">
 <div class="col-lg-10 col-lg-offset-1">
@@ -22,6 +25,7 @@
     <!-- 筛选组件结束 -->
     <div class="row products-list">
       @foreach($products as $product)
+        {{-- {{ dd($product) }} --}}
         <div class="col-xs-3 product-item">
           <div class="product-content">
             <div class="top">
@@ -46,7 +50,8 @@
 </div>
 </div>
 </div>
-  @section('scriptsAfterJs')
+@endsection
+@section('scriptsAfterJs')
     <script>
       var filters = {!! json_encode($filters) !!};
       $(document).ready(function () {
@@ -57,5 +62,4 @@
         });
       })
     </script>
-  @endsection
 @endsection

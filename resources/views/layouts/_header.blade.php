@@ -19,6 +19,9 @@
                     <li><a href="{{ route('login') }}">登录</a></li>
                     <li><a href="{{ route('register') }}">注销</a></li>
                 @else
+                    <li>
+                        <a href="{{ route('cart.index') }}"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
                             <span class="user-avatar pull-left " style="margin-right:8px; margin-top:-5px;">

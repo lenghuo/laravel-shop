@@ -15,3 +15,9 @@ yarn-error.log
 /public/css
 /public/fonts/
 /public/mix-manifest.json
+*.php~
+/*.php~
+*.php~~
+/*.php~~
+*.scss~
+/*.scss~
